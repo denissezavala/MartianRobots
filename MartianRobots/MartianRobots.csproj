@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\CommandsParser.cs" />
+    <Compile Include="Helpers\InputReader.cs" />
     <Compile Include="Interfaces\IGrid.cs" />
     <Compile Include="Interfaces\IInstructionsParser.cs" />
     <Compile Include="Helpers\InstructionsParser.cs" />

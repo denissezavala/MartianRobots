@@ -11,10 +11,10 @@ namespace MartianRobots.BusinessObjects
     public class Robot
     {
         private IInstructionsParser _instructionsParser;
-        private IGrid _grid;
+        private Grid _grid;
         public Position Position { get; set; }
 
-        public Robot(int x, int y, string orientation, IInstructionsParser instructionsParser, IGrid grid)
+        public Robot(int x, int y, string orientation, IInstructionsParser instructionsParser, Grid grid)
         {
             Position = new Position(x, y, orientation.ToDegrees());
             _instructionsParser = instructionsParser;
@@ -33,7 +33,7 @@ namespace MartianRobots.BusinessObjects
 
         private void ExecuteInstruction(Instruction instruction)
         {
-            if (Position.IsValid)
+            if (instruction != null && Position.IsValid)
             {
                 Turn(instruction.Degrees);
                 Move(instruction.Distance);

@@ -15,7 +15,7 @@ namespace MartianRobots.Tests.BusinessObjects
     {
         private Robot _sut;
         private IInstructionsParser _instructionsParser;
-        private IGrid _grid;
+        private Grid _grid;
 
         [SetUp]
         public void Setup()
@@ -150,6 +150,24 @@ namespace MartianRobots.Tests.BusinessObjects
         //    Assert.AreEqual(expectedY, result.Coordinate.Y);
         //    Assert.AreEqual(expectedDegrees,  Math.Abs(result.Degrees));
         //}
-       
+
+        [Test]
+        public void ExecuteInstructions_Ignores_Unknown_Instructions()
+        {
+            // Arrange
+            var expectedX = 1;
+            var expectedY = 1;
+            var expectedDegrees = 90;
+            var instructions = "RXUWFRFRFRF";
+            _sut = new Robot(1, 1, "E", _instructionsParser, _grid);
+
+            // Act
+            var result = _sut.ExecuteInstructions(instructions);
+
+            // Assert
+            Assert.AreEqual(expectedX, result.Coordinate.X);
+            Assert.AreEqual(expectedY, result.Coordinate.Y);
+            Assert.AreEqual(expectedDegrees, result.Degrees);
+        }
     }
 }

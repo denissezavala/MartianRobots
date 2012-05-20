@@ -6,7 +6,7 @@ using MartianRobots.Interfaces;
 
 namespace MartianRobots.BusinessObjects
 {
-    public class Grid : IGrid
+    public class Grid
     {
         private Coordinate _limit { get; set; }
         private List<Coordinate> _scentedCoordinates { get; set; }
