@@ -9,9 +9,9 @@ namespace MartianRobots.BusinessObjects
     public class Position
     {
         public Coordinate Coordinate { get; set; }
-        public double Degrees { get; set; }
+        public int Degrees { get; set; }
 
-        public Position(int x, int y, double degrees)
+        public Position(int x, int y, int degrees)
         {
             Coordinate = new Coordinate(x, y);
             Degrees = degrees;

@@ -7,7 +7,7 @@ namespace MartianRobots.Extensions
 {
     public static class StringExtensions
     {
-        public static double ToDegrees(this string orientation)
+        public static int ToDegrees(this string orientation)
         {
             switch (orientation)
             {

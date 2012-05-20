@@ -3,35 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using MartianRobots.Extensions;
+using MartianRobots.Helpers;
 
 namespace MartianRobots.BusinessObjects
 {
     public class Robot
     {
+        private IInstructionsParser _instructionsParser;
         public Position Position { get; set; }
-        //public static List<Instruction> InstructionsDefinition { get; set; }
 
-        public Robot(int x, int y, string orientation)
+        public Robot(int x, int y, string orientation, IInstructionsParser instructionsParser)
         {
             Position = new Position(x, y, orientation.ToDegrees());
+            _instructionsParser = instructionsParser;
         }
 
         public Position ExecuteInstructions(string instructions)
         {
-            foreach (var instruction in InstructionsParser.Parse(instructions))
+            foreach (var instruction in _instructionsParser.Parse(instructions))
             {
                 ExecuteInstruction(instruction);
             }
             return Position;
         }
-
-        //private IEnumerable<Instruction> ParseInstructionsString(string instructions)
-        //{
-        //    foreach (var instName in instructions)
-        //    {
-        //        yield return InstructionsDefinition.Find(x => x.Name == instName.ToString());
-        //    }
-        //}
 
         private void ExecuteInstruction(Instruction instruction)
         {
@@ -40,7 +34,7 @@ namespace MartianRobots.BusinessObjects
             //Console.WriteLine("After instruction {0}, degrees: {1}, coord: {2},{3}", instruction.Name, Position.Degrees, Position.Coordinate.X, Position.Coordinate.Y);
         }
 
-        private void Turn(double degrees)
+        private void Turn(int degrees)
         {
             if (degrees != 0)
             {
