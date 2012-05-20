@@ -1,0 +1,12 @@
+C:\Projects\MartianRobots\MartianRobots.Tests\bin\Debug\MartianRobots.Tests.dll
+C:\Projects\MartianRobots\MartianRobots.Tests\bin\Debug\MartianRobots.Tests.pdb
+C:\Projects\MartianRobots\MartianRobots.Tests\bin\Debug\MartianRobots.exe
+C:\Projects\MartianRobots\MartianRobots.Tests\bin\Debug\Moq.dll
+C:\Projects\MartianRobots\MartianRobots.Tests\bin\Debug\nunit.framework.dll
+C:\Projects\MartianRobots\MartianRobots.Tests\bin\Debug\MartianRobots.pdb
+C:\Projects\MartianRobots\MartianRobots.Tests\bin\Debug\Moq.pdb
+C:\Projects\MartianRobots\MartianRobots.Tests\bin\Debug\Moq.xml
+C:\Projects\MartianRobots\MartianRobots.Tests\bin\Debug\nunit.framework.xml
+C:\Projects\MartianRobots\MartianRobots.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\MartianRobots\MartianRobots.Tests\obj\Debug\MartianRobots.Tests.dll
+C:\Projects\MartianRobots\MartianRobots.Tests\obj\Debug\MartianRobots.Tests.pdb

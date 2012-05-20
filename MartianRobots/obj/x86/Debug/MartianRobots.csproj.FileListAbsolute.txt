@@ -1,0 +1,5 @@
+C:\Projects\MartianRobots\MartianRobots\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Projects\MartianRobots\MartianRobots\bin\Debug\MartianRobots.exe
+C:\Projects\MartianRobots\MartianRobots\bin\Debug\MartianRobots.pdb
+C:\Projects\MartianRobots\MartianRobots\obj\x86\Debug\MartianRobots.exe
+C:\Projects\MartianRobots\MartianRobots\obj\x86\Debug\MartianRobots.pdb
