@@ -5,7 +5,7 @@ using System.Text;
 using NUnit.Framework;
 using Moq;
 using MartianRobots.BusinessObjects;
-using MartianRobots.Helpers;
+using MartianRobots.Input;
 using MartianRobots.Interfaces;
 
 namespace MartianRobots.Tests.BusinessObjects

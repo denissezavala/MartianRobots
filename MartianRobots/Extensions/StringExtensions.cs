@@ -23,5 +23,10 @@ namespace MartianRobots.Extensions
                     throw new NotImplementedException();
             }
         }
+
+        public static string Truncate(this string longString, int length)
+        {
+            return length < longString.Length ? longString.Substring(0, length) : longString;
+        }
     }
 }

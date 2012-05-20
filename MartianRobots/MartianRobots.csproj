@@ -43,17 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helpers\CommandsParser.cs" />
-    <Compile Include="Helpers\InputReader.cs" />
+    <Compile Include="Input\CommandsParser.cs" />
+    <Compile Include="Input\InputReader.cs" />
+    <Compile Include="Input\RobotCommand.cs" />
     <Compile Include="Interfaces\IGrid.cs" />
     <Compile Include="Interfaces\IInstructionsParser.cs" />
-    <Compile Include="Helpers\InstructionsParser.cs" />
+    <Compile Include="Input\InstructionsParser.cs" />
     <Compile Include="Extensions\IntExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="BusinessObjects\Coordinate.cs" />
     <Compile Include="BusinessObjects\Grid.cs" />
     <Compile Include="BusinessObjects\Instruction.cs" />
     <Compile Include="BusinessObjects\Position.cs" />
+    <Compile Include="MarsConsole.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BusinessObjects\Robot.cs" />

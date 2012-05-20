@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using MartianRobots.Extensions;
-using MartianRobots.Helpers;
+using MartianRobots.Input;
 using MartianRobots.Interfaces;
 
 namespace MartianRobots.BusinessObjects
@@ -37,7 +37,6 @@ namespace MartianRobots.BusinessObjects
             {
                 Turn(instruction.Degrees);
                 Move(instruction.Distance);
-                //Console.WriteLine("After instruction {0}, degrees: {1}, coord: {2},{3}", instruction.Name, Position.Degrees, Position.Coordinate.X, Position.Coordinate.Y);
             }
         }
 

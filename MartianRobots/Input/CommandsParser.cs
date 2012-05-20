@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using MartianRobots.BusinessObjects;
 
-namespace MartianRobots.Helpers
+namespace MartianRobots.Input
 {
     public class CommandsParser
     {
