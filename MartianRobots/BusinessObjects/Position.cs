@@ -10,16 +10,18 @@ namespace MartianRobots.BusinessObjects
     {
         public Coordinate Coordinate { get; set; }
         public int Degrees { get; set; }
+        public bool IsValid { get; set; }
 
         public Position(int x, int y, int degrees)
         {
             Coordinate = new Coordinate(x, y);
             Degrees = degrees;
+            IsValid = true;
         }
 
         public override string ToString()
         {
-            return string.Format("{0} {1} {2}", Coordinate.X, Coordinate.Y, Degrees.ToOrientation());
+            return string.Format("{0} {1} {2} {3}", Coordinate.X, Coordinate.Y, Degrees.ToOrientation(), IsValid ? string.Empty : "LOST" );
         }
     }
 }

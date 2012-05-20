@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using MartianRobots.BusinessObjects;
 using MartianRobots.Helpers;
+using MartianRobots.Interfaces;
 
 namespace MartianRobots
 {
@@ -11,9 +12,10 @@ namespace MartianRobots
     {
         public static void Main(string[] args)
         {
-            var robotA = new Robot(1, 1, "E", InstructionsParser());
-            var robotB = new Robot(3, 2, "N", InstructionsParser());
-            var robotC = new Robot(0, 3, "W", InstructionsParser());
+            var grid = new Grid(5, 3);
+            var robotA = new Robot(1, 1, "E", InstructionsParser(), grid);
+            var robotB = new Robot(3, 2, "N", InstructionsParser(), grid);
+            var robotC = new Robot(0, 3, "W", InstructionsParser(), grid);
 
             Console.WriteLine("Robot A");
             Console.WriteLine(robotA.ExecuteInstructions("RFRFRFRF"));

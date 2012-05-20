@@ -23,7 +23,20 @@ namespace MartianRobots.Tests.BusinessObjects
             var result = _sut.ToString();
 
             // Assert
-            Assert.AreEqual("3 5 E", result);
+            Assert.AreEqual("3 5 E ", result);
+        }
+
+        public void ToString_Returns_String_With_LOST_When_Position_Invalid()
+        {
+            // Arrange
+            _sut = new Position(3, 5, 90);
+            _sut.IsValid = false;
+
+            // Act
+            var result = _sut.ToString();
+
+            // Assert
+            Assert.AreEqual("3 5 E LOST", result);
         }
     }
 }

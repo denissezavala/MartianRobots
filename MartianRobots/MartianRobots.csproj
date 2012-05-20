@@ -43,11 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helpers\IInstructionsParser.cs" />
+    <Compile Include="Interfaces\IGrid.cs" />
+    <Compile Include="Interfaces\IInstructionsParser.cs" />
     <Compile Include="Helpers\InstructionsParser.cs" />
     <Compile Include="Extensions\IntExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="BusinessObjects\Orientation.cs" />
     <Compile Include="BusinessObjects\Coordinate.cs" />
     <Compile Include="BusinessObjects\Grid.cs" />
     <Compile Include="BusinessObjects\Instruction.cs" />

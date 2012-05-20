@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessObjects\GridTests.cs" />
     <Compile Include="BusinessObjects\PositionTests.cs" />
     <Compile Include="BusinessObjects\RobotTests.cs" />
     <Compile Include="Extensions\StringExtensionsTests.cs" />
