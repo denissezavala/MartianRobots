@@ -60,19 +60,6 @@ namespace MartianRobots.Tests.BusinessObjects
             Assert.AreEqual(degrees, _sut.Position.Degrees);
         }
 
-        //[Test]
-        //public void Turn_Updates_Position_Degrees()
-        //{
-        //    // Arrange
-        //    _sut = new Robot(0, 0, "N", _instructionsParser);
-            
-        //    // Act
-        //    _sut.Turn(90);
-
-        //    // Assert
-        //    Assert.AreEqual(90, _sut.Position.Degrees);
-        //}
-
         [Test]
         public void Execute_Instructions_Calls_InstructionParser_Parse()
         {
@@ -102,6 +89,63 @@ namespace MartianRobots.Tests.BusinessObjects
 
             // Assert
             Assert.IsInstanceOf<Position>(result);
+        }
+
+        [Test]
+        public void ExecuteInstructions_Returns_1_1_E_For_RFRFRFRF()
+        {
+            // Arrange
+            var expectedX = 1;
+            var expectedY = 1;
+            var expectedDegrees = 90;
+            var instructions = "RFRFRFRF";
+            _sut = new Robot(1, 1, "E", _instructionsParser);
+
+            // Act
+            var result = _sut.ExecuteInstructions(instructions);
+
+            // Assert
+            Assert.AreEqual(expectedX, result.Coordinate.X);
+            Assert.AreEqual(expectedY, result.Coordinate.Y);
+            Assert.AreEqual(expectedDegrees, result.Degrees);
+        }
+
+        [Test]
+        public void ExecuteInstructions_Returns_3_3_N_For_FRRFLLFFRRFLL()
+        {
+            // Arrange
+            var expectedX = 3;
+            var expectedY = 3;
+            var expectedDegrees = 0;
+            var instructions = "FRRFLLFFRRFLL";
+            _sut = new Robot(3, 2, "N", _instructionsParser);
+
+            // Act
+            var result = _sut.ExecuteInstructions(instructions);
+
+            // Assert
+            Assert.AreEqual(expectedX, result.Coordinate.X);
+            Assert.AreEqual(expectedY, result.Coordinate.Y);
+            Assert.AreEqual(expectedDegrees, result.Degrees);
+        }
+
+        [Test]
+        public void ExecuteInstructions_Returns_2_4_S_For_LLFFFLFLFL()
+        {
+            // Arrange
+            var expectedX = 2;
+            var expectedY = 4; // 2 according to example ????
+            var expectedDegrees =180;
+            var instructions = "LLFFFLFLFL";
+            _sut = new Robot(0, 3, "W", _instructionsParser);
+
+            // Act
+            var result = _sut.ExecuteInstructions(instructions);
+
+            // Assert
+            Assert.AreEqual(expectedX, result.Coordinate.X);
+            Assert.AreEqual(expectedY, result.Coordinate.Y);
+            Assert.AreEqual(expectedDegrees,  Math.Abs(result.Degrees));
         }
        
     }
